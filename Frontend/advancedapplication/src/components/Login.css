@@ -1,0 +1,65 @@
+.cover-login
+{
+    background-color: rgba(129, 0, 60, 0.349);
+    opacity: 0.5;
+    position:absolute;
+    left:10%;
+    top:24%;
+    border-radius: 15px;
+    height: 50vh;
+    width: 75vh;
+    background-size: cover;
+    color: white;
+    /* position: fixed; */
+    display: flex;
+    box-shadow: 0 0.188em 1.550em rgb(196, 17, 157);
+}
+#login-background-image
+{
+    position: absolute;
+    left:55%;
+    display: flex;
+}
+.yoga-academy-logo 
+{
+ font-size:xx-large;
+ font-family: 'Times New Roman', Times, serif;
+ font-style: italic;
+ font-weight: bolder;
+ position: absolute;
+ top:5%;
+ left: 5%;
+ color: rgb(196, 23, 187);
+}
+#loginform
+{
+    position: absolute;
+    left: 19%;
+    top:30%;
+    font-size: large;
+    color: rgb(0, 0, 0);
+}
+.fieldset-login
+{
+    width: 200px;
+    height: 210px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: larger;
+}
+.login_button
+{
+    position: absolute;
+    left:88px;
+    top:83%;
+    border-radius: 10px;
+    background-color: rgb(52, 9, 92);
+    width: 30%;
+    height: 15%;
+    color: aliceblue;
+}
+@media only screen and (min-width: 1024px) {
+    .cover-login{
+      display:flex;
+    }
+}
