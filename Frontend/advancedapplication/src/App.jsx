@@ -1,9 +1,11 @@
 import './App.css'
 import {BrowserRouter ,Route, Routes} from 'react-router-dom'
-import Login from './Components/Login'
+import Login from './components/Login'
 import Home from './components/Home'
 import Register from './components/Register'
 import { Suspense } from 'react'
+import AdminDashboard from './components/admin/AdminDashboard'
+import UserDashboard from './components/user/UserDashboard'
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
+          <Route path='/user/dashboard' element={<UserDashboard/>}/>
       </Routes>
       </Suspense>
     </BrowserRouter>

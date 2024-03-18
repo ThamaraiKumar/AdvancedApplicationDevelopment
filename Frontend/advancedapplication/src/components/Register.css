@@ -1,0 +1,171 @@
+.yoga-academy-logo 
+{
+ font-size:xx-large;
+ font-family: 'Times New Roman', Times, serif;
+ font-style: italic;
+ font-weight: bolder;
+ position: absolute;
+ top:8%;
+ left: 9%;
+ color: rgb(53, 0, 50);
+}
+.form-register
+{
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    top:20%;
+    display: flex;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    width: 30vw;
+}
+.register-glasscover
+{
+  background-image: linear-gradient(skyblue,palegreen);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+position: absolute;
+left:20%;
+height: 79vh;
+width: 24vw;
+top:18%;
+
+}
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 1px solid #d65776;
+    animation: shake_541 0.14s 3;
+  }
+  
+
+  select:focus {
+    outline: none; 
+    border-color: #414549; 
+  }
+  
+  .side-register-image
+  {
+    position: absolute;
+    left:56%;
+    top: 19%;
+    border-radius: 10%;
+
+    background-image: url("https://i.pinimg.com/originals/df/0a/3e/df0a3e2ec30abb1c92d145ef165b714f.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  select option {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  select option:checked {
+    background-color: #708ead;
+    color: #fff;
+  }
+  
+
+
+@media only screen and (min-width: 1024px) {
+    .form-register{
+      display:flex;
+    }
+}
+
+
+.form-input-register{
+    width: 190px;
+    height: 35px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #d65776;
+    animation: shake_541 0.14s 3;
+  }
+
+  
+ .form-input-register:valid ,select:valid{
+    border-color: #7daf81;
+    animation: none;
+  }
+  
+  @keyframes shake_541 {
+    0%, 100% {
+      translate: 0;
+    }
+  
+    25% {
+      translate: 8px 0;
+    }
+  
+    75% {
+      translate: -8px 0;
+    }
+  }
+
+.signinButton
+{
+  position:absolute;
+  background-color: transparent;
+  font-family: cursive;
+  border:none;
+  cursor: pointer;
+  top:105%;
+  left:1%;
+  font-size: large;
+}
+.submitButton {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF,  50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  /* line-height: 1em; */
+  /* max-width: 100%; */
+  min-width: 140px;
+  padding: 7px;
+  /* text-decoration: none; */
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  /* touch-action: manipulation; */
+  /* white-space: nowrap; */
+  cursor: pointer;
+  /* transition: all .3s; */
+ }
+ 
+ 
+ 
+ /* .submitButton div {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+ } */
+ 
+ .submitButton:hover  {
+  background-image: linear-gradient( to right,#cdc767,#de0b4f);
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
+ }
+ 
+ /* .submitButton:active {
+  transform: scale(0.9);
+ } */

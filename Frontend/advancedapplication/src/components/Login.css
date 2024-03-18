@@ -4,7 +4,7 @@
     opacity: 0.5;
     position:absolute;
     left:10%;
-    top:24%;
+    top:30%;
     border-radius: 15px;
     height: 50vh;
     width: 75vh;
@@ -13,11 +13,13 @@
     /* position: fixed; */
     display: flex;
     box-shadow: 0 0.188em 1.550em rgb(196, 17, 157);
+    
 }
 #login-background-image
 {
     position: absolute;
     left:55%;
+    top:2%;
     display: flex;
 }
 .yoga-academy-logo 
@@ -27,33 +29,52 @@
  font-style: italic;
  font-weight: bolder;
  position: absolute;
- top:5%;
- left: 5%;
- color: rgb(196, 23, 187);
+ top:8%;
+ left: 9%;
+ color: rgb(197, 5, 188);
 }
 #loginform
 {
     position: absolute;
-    left: 19%;
-    top:30%;
+    left: 20%;
+    top:35%;
     font-size: large;
     color: rgb(0, 0, 0);
 }
 .fieldset-login
 {
     width: 200px;
-    height: 210px;
+    height: 255px;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    font-size: larger;
+    font-size: larger;   
+}
+.input-login-form, .form-label
+{
+  margin-left:3%;
+}
+
+.create-register-button
+{
+ position: absolute;
+ top:75%;
+ left:18%;
+ display: flex;
+ background-color: transparent;
+ border: none;
+ font-family: 'Times New Roman', Times, serif;
+ font-style: italic;
+ font-size: large;
+ font-weight: bolder;
 }
 .login_button
 {
     position: absolute;
-    left:88px;
+    left:70px;
     top:83%;
     border-radius: 10px;
-    background-color: rgb(52, 9, 92);
+    border: none;
+    background-color: rgb(99, 56, 139);
     width: 30%;
     height: 15%;
     color: aliceblue;
@@ -63,3 +84,41 @@
       display:flex;
     }
 }
+.image-logo-login
+{
+    position: absolute;
+    width: 8%;
+    display: flex;
+    top:2%;
+    left: 2%;
+    
+}
+
+#emailid,#password {
+    width: 180px;
+    height: 30px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ca5fa6;
+    animation: shake_541 0.14s 3;
+  }
+
+  
+  #emailid:valid,#password:valid {
+    border-color: #7daf81;
+    animation: none;
+  }
+  
+  @keyframes shake_541 {
+    0%, 100% {
+      translate: 0;
+    }
+  
+    25% {
+      translate: 8px 0;
+    }
+  
+    75% {
+      translate: -8px 0;
+    }
+  }

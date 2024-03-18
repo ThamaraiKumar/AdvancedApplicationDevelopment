@@ -1,0 +1,58 @@
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+.navbarlist
+{
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+}
+.navbarlist li
+{
+    margin:0 15px;
+    font-size: x-large;
+    position: relative;
+    left:73%;
+    top: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.navbarlist li:hover
+{
+    text-decoration: underline rgba(87, 88, 9, 0.692);
+    text-shadow: 1px 1px rgb(95, 94, 0);
+}
+.header-home
+{
+    background-color: transparent;
+    padding: 20px 10px;
+    display: flex-box;
+}
+.logo-yoga
+{
+    font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+  left:12%;
+  top:10%;
+}
+.image-logo
+{
+    width: 10%;
+    position: absolute;
+    left: 2%;
+}
+
+.text-content-home
+{
+    color: rgb(197, 125, 37);
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+    font-style: italic;
+    font-family:"Sofia";
+    font-size: xx-large;
+}
