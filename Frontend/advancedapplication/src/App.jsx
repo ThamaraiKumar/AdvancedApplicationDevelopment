@@ -6,6 +6,11 @@ import Register from './components/Register'
 import { Suspense } from 'react'
 import AdminDashboard from './components/admin/AdminDashboard'
 import UserDashboard from './components/user/UserDashboard'
+import EnrolledCourse from './components/user/EnrolledCourse'
+import Settings from './components/admin/Settings'
+import GetUsers from './components/admin/GetUsers'
+import ShowAcademies from './components/admin/ShowAcademies'
+import AddAcademy from './components/admin/AddAcademy'
 
 
 function App() {
@@ -20,6 +25,11 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
           <Route path='/user/dashboard' element={<UserDashboard/>}/>
+          <Route path='/user/emrollement' element={<EnrolledCourse/>}/>
+          <Route path='/admin/settings' element={<Settings/>}/>
+          <Route path='/admin/addacademy' element={<AddAcademy/>}/>
+          <Route path='/admin/showacademies' element={<ShowAcademies/>}/>
+          <Route path='/admin/users' element={<GetUsers/>}/>
       </Routes>
       </Suspense>
     </BrowserRouter>

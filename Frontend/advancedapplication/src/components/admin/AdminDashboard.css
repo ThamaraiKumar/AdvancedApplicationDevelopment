@@ -1,0 +1,274 @@
+.sidebar-admin {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .admin-title
+  {
+    position: absolute;
+    color: black;
+    font-family: cursive;
+    font-style:italic;
+    top:4%;
+    left: 43%;
+    text-align: center;
+  }
+  
+  .sidebar-admin a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar-admin a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .sidebar-admin a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar-admin {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar-admin a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar-admin a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+
+  /* settings page */
+  .profile-admin{
+    font-family: 'Poppins', sans-serif;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .profile-card {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 500px;
+  }
+  
+  .profile-card .profile-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .profile-card .profile-text img{
+      height: 170px;
+      border-radius: 50%;
+    margin-bottom:10px;
+  }
+  
+  .profile-card .profile-text h3{
+      font-size: 40px;
+      font-weight: 400;
+  }
+  
+  .profile-card .profile-text p:nth-of-type(1){
+      color: rgb(84, 129, 98);
+      font-size: 15px;
+      margin-top: -5px;
+  }
+  
+  .profile-card .profile-text p:nth-of-type(2){
+      margin: 10px;
+      width: 90%;
+      text-align: center;
+  }
+  
+  .profile-card .profile-links{
+      width: 30%;
+      display: flex;
+      justify-content: space-evenly;
+  }
+  
+    .profile-card .profile-links i{
+      color: rgb(87, 181, 204);
+      font-size: 20px;
+      cursor: pointer;
+  }
+  
+  .profile-card .profile-links i:hover{
+      color:rgb(29, 157, 189) ;
+  }
+
+  /* getusers */
+  table
+{
+    width:40%;
+    height: 25%;
+    position: absolute;
+    top:25%;
+    left:32%;
+
+}
+
+.tableheading-admin
+{
+  top:19%;
+  position: fixed;
+  left:46%;
+  /* position: absolute; */
+}
+td {
+    text-align: center;
+  }
+th, td {
+    border-bottom: 1px solid #0a0000; 
+  }
+  
+  th{
+    background-color: #020202e8;
+    color: white;
+  }
+
+  /* show academies */
+  .heading-show-academies
+{
+  top:19%;
+  /* position: fixed; */
+  left:44.5%;
+  font-size: xx-large;
+  position: absolute;
+}
+.academycard
+{
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+#academycard-showing
+{
+    height: max-content;
+}
+
+.content-academy{
+    padding:2px 16px;
+}
+#academycard-showing
+{
+    position: absolute;
+    height: 15%;
+    bottom:34%;
+    left:25%;
+    background-color:transparent;
+    align-content: center;
+    font-family: cursive;
+    display:grid;
+    /* display: flex; */
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    column-count: 4; /*used only with display:flex*/
+    text-align: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 19px;
+    columns: 100px 5;
+    /* float: left; */
+    float: right;
+    /* grid-template-columns: 100px 100px 100px; */
+    /* flex-flow: column wrap; */
+    
+   
+
+}
+.academyimage:hover{
+    transform: scale(0.93);
+}
+
+
+
+/* add academy */
+.add-academy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Title */
+.addacademy-admin {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form */
+
+
+.addacademy-admin
+{
+  position: absolute;
+  display: flex;
+  top:20%;
+  font-size: xx-large;
+  left:46%;
+}
+
+.academy-add-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  position: absolute;
+  top:34%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  left: 30%;
+  height:50vh;
+}
+
+/* Form inputs */
+.input-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form submit button */
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

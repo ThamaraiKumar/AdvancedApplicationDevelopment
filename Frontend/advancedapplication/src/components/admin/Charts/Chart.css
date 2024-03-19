@@ -1,0 +1,14 @@
+/* no of users */
+.barchart
+{
+    position: absolute;
+    top:23%;
+    left:35%;
+}
+.chart-desc
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    position: absolute;
+    left:53%;
+}

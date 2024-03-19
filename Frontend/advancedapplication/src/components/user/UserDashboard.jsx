@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import './Dashboard.css'
 import logo from 'D:/AdvancedApplicationDevelopment/AdvancedApplicationDevelopment/Frontend/advancedapplication/src/assets/logo.png'
 import { Link } from 'react-router-dom'
-import {  MenuItem } from '@mui/material'
+import {  MenuItem, Rating } from '@mui/material'
 import yogacenter1 from 'D:/AdvancedApplicationDevelopment/AdvancedApplicationDevelopment/Frontend/advancedapplication/src/assets/coimbatore-yoga-center.png'
+
 
 function UserDashboard() {
 
@@ -21,9 +22,9 @@ function UserDashboard() {
       </label>
       <label className="user-navbar-logo"><Link to='/'><img src={logo} className='image-logo-login'/></Link>YOGA &nbsp; ACADEMY</label>
       <ul className='ul'>
-        <li className='li'><a className="user-active" href="#">Home</a></li>
-        <li className='li' id='userAcademy'><a href="#">Academy</a></li>
-        <li className='li' id='userEnrolledCourse'><a href="#">Enrolled Course</a></li>
+        <li className='li'><Link  to="/" className="user-active" >Home</Link></li>
+        <li className='li' id='userAcademy'><a href="#useracademygrid">Academy</a></li>
+        <li className='li' id='userEnrolledCourse'><Link to='/user/emrollement'>Enrolled Course</Link></li>
         <li className='li' id='logout'><Link to='/login' className='logout-navbar'>Logout</Link></li>
       </ul>
     </nav>
@@ -36,26 +37,27 @@ function UserDashboard() {
 <div id='useracademygrid' className='user-academy-image-gallery'>
 
 <div className="responsive-user-dashboard">
-  <div className="gallery-user-dashboard">
-      <img src={yogacenter1} alt="Coimbatore-center" width="150" height="250"/>
-    <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center</div>
+  <div className="gallery-user-dashboard image1">
+      <img src={yogacenter1} alt="Coimbatore-center" width="50" height="250"/>
+    <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center&nbsp;<Rating/></div>
    </div>
-    <div className="gallery-user-dashboard">
-    <img src={yogacenter1} alt="Coimbatore-center" width="150" height="250"/>
-    <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center</div>
+</div>
+
+   <div className="responsive-user-dashboard">
+   <div className="gallery-user-dashboard image1">
+       <img src={yogacenter1} alt="Coimbatore-center" width="50" height="250"/>
+      <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center&nbsp;<Rating/></div>
+    </div>
     </div>
 
-    <div className="gallery-user-dashboard">
-    <img src={yogacenter1} alt="Coimbatore-center" width="150" height="250"/>
-    <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center</div>
+  <div className="responsive-user-dashboard">
+   <div className="gallery-user-dashboard image1">
+       <img src={yogacenter1} alt="Coimbatore-center" width="50" height="250"/>
+     <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center&nbsp;<Rating/></div>
   </div>
-</div>
-
-
-</div>
-
+  </div>
+  </div>   
     </section>
-    
     </div>
   )
 }
