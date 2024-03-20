@@ -26,12 +26,13 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
           <Route path='/user/dashboard' element={<UserDashboard/>}/>
-          <Route path='/user/emrollement' element={<EnrolledCourse/>}/>
+          <Route path='/user/enrollement' element={<EnrolledCourse/>}/>
           <Route path='/admin/settings' element={<Settings/>}/>
           <Route path='/admin/addacademy' element={<AddAcademy/>}/>
           <Route path='/admin/showacademies' element={<ShowAcademies/>}/>
           <Route path='/admin/users' element={<GetUsers/>}/>
           <Route path="admin/dashboard/chart" element={<NoofUsers/>}/>
+          <Route path='*' element={<div><img src='https://freefrontend.com/assets/img/html-funny-404-pages/CodePen-404-Page.gif'/></div>}/>
       </Routes>
       </Suspense>
     </BrowserRouter>

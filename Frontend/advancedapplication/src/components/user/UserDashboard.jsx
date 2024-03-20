@@ -30,7 +30,7 @@ function UserDashboard() {
       <ul className='ul'>
         <li className='li'><Link  to="/" className="user-active" >Home</Link></li>
         <li className='li' id='userAcademy'><a href="#useracademygrid">Academy</a></li>
-        <li className='li' id='userEnrolledCourse'><Link to='/user/emrollement'>Enrolled Course</Link></li>
+        <li className='li' id='userEnrolledCourse'><Link to='/user/enrollement'>Enrolled Course</Link></li>
         <li className='li' id='logout'><Link to='/login' onClick={logout} className='logout-navbar'>Logout</Link></li>
       </ul>
     </nav>
@@ -51,7 +51,7 @@ function UserDashboard() {
 
    <div className="responsive-user-dashboard">
    <div className="gallery-user-dashboard image1">
-       <img src={yogacenter1} alt="Coimbatore-center" width="50" height="250"/>
+       <Link to="/user/enrollement"><img src={yogacenter1} alt="Coimbatore-center" width="50" height="250"/></Link>
       <div className="desc-user-dashboard">Coimbatore <br/>Place:Yoga Center&nbsp;<Rating/></div>
     </div>
     </div>
