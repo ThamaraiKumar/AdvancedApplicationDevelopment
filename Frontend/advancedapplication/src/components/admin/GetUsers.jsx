@@ -1,6 +1,7 @@
 import React from 'react'
 import AdminDashboard from './AdminDashboard'
 
+
 function GetUsers() {
 
 const details=[
@@ -33,6 +34,7 @@ const details=[
           <th>user Name</th>
           <th>User EmailId</th>
           <th>User MobileNo</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -42,6 +44,7 @@ const details=[
             <td>{user.userName}</td>
             <td>{user.emailid}</td>
             <td>{user.mobilenumber}</td>
+            <td><button style={{border:'none',color:'inherit',backgroundColor:'transparent'}}>Remove</button></td>
             </tr>
         )})}
       </tbody>

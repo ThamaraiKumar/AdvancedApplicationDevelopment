@@ -1,8 +1,11 @@
 import React from 'react'
+import UserDashboard from './UserDashboard'
 
 function EnrolledCourse() {
   return (
-    <div>EnrolledCourse</div>
+    <div>
+    <nav><UserDashboard/></nav>  
+    </div>
   )
 }
 

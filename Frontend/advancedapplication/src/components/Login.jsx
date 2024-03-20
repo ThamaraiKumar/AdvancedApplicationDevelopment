@@ -5,13 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 import loginbackground from '../assets/login-background.png'
 import logo from '../assets/logo.png'
 import './Login.css'
+import bcrypt from 'bcryptjs'
 
 function Login() {
 
   const [emailid,setEmailid]=useState('')
   const [password,setPassword]=useState('')
   const navigate=useNavigate();
-
+  const salt = bcrypt.genSaltSync(10)
+  const encryptPassword=bcrypt.hashSync(password, '$2a$10$CwTycUXWue0Thq9StjUM0u');
 const submit=(e)=>{
    e.preventDefault();
    if(emailid.length===0 || password.length===0)
@@ -21,9 +23,11 @@ const submit=(e)=>{
   else{
     emailid:emailid;
     password:password;
-    console.log(emailid+" "+password);
+    localStorage.setItem("emailId",emailid);
+    localStorage.setItem("token",encryptPassword);
+    console.log(emailid+" "+encryptPassword);
     toast.success("Congratulations🥳");
-    if(emailid==="admin@gmail.com"&& password==="admin@Password") navigate("/admin/dashboard");
+    if(emailid==="admin@gmail.com"&& password==="admin@Password") navigate("/admin/dashboard/chart");
     else navigate("/user/dashboard");
   }
 }

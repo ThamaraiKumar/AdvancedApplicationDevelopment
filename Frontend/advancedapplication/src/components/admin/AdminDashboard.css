@@ -223,9 +223,6 @@ th, td {
   margin-bottom: 20px;
 }
 
-/* Form */
-
-
 .addacademy-admin
 {
   position: absolute;
@@ -248,7 +245,6 @@ th, td {
   height:50vh;
 }
 
-/* Form inputs */
 .input-field {
   width: 100%;
   margin-bottom: 10px;
@@ -257,7 +253,6 @@ th, td {
   border-radius: 5px;
 }
 
-/* Form submit button */
 .submit-button {
   width: 100%;
   padding: 10px;

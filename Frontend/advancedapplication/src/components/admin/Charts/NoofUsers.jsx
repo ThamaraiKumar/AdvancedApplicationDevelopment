@@ -7,6 +7,7 @@ import {
     YAxis,
 } from "recharts";
 import './Chart.css'
+import AdminDashboard from '../AdminDashboard';
 
 function NoofUsers() {
     const data = [
@@ -17,6 +18,8 @@ function NoofUsers() {
     ];
 
   return (
+    <div>
+    <div><AdminDashboard/></div>
     <div className='barchart'>
     <BarChart width={500} height={400} data={data}>
             <Bar dataKey="users" fill="skyblue" />
@@ -25,7 +28,7 @@ function NoofUsers() {
             <YAxis />
         </BarChart>
         <div className='chart-desc'>No of Users till Now</div>
-        
+    </div>
     </div>
   )
 }

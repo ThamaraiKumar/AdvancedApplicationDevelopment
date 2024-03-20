@@ -11,6 +11,7 @@ import Settings from './components/admin/Settings'
 import GetUsers from './components/admin/GetUsers'
 import ShowAcademies from './components/admin/ShowAcademies'
 import AddAcademy from './components/admin/AddAcademy'
+import NoofUsers from './components/admin/Charts/NoofUsers'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/admin/addacademy' element={<AddAcademy/>}/>
           <Route path='/admin/showacademies' element={<ShowAcademies/>}/>
           <Route path='/admin/users' element={<GetUsers/>}/>
+          <Route path="admin/dashboard/chart" element={<NoofUsers/>}/>
       </Routes>
       </Suspense>
     </BrowserRouter>

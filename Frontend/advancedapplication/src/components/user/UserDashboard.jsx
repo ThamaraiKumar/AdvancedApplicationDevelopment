@@ -13,6 +13,12 @@ function UserDashboard() {
   const Search=()=>{
     console.log(setSearch);
   }
+
+  const logout=()=>{
+    localStorage.removeItem("username");
+    localStorage.removeItem("mobilenum");
+    localStorage.removeItem("emailid");
+  }
   return (
     <div>
     <nav className='user-nav'>
@@ -25,12 +31,12 @@ function UserDashboard() {
         <li className='li'><Link  to="/" className="user-active" >Home</Link></li>
         <li className='li' id='userAcademy'><a href="#useracademygrid">Academy</a></li>
         <li className='li' id='userEnrolledCourse'><Link to='/user/emrollement'>Enrolled Course</Link></li>
-        <li className='li' id='logout'><Link to='/login' className='logout-navbar'>Logout</Link></li>
+        <li className='li' id='logout'><Link to='/login' onClick={logout} className='logout-navbar'>Logout</Link></li>
       </ul>
     </nav>
     <section>
     <div className='content-user-dashboard'>
-    <input type='text' className='search-bar-user' value={search} onChange={(e)=>{setSearch(e.target.value)}} placeholder='Search...'></input>
+    <input type='text' className='search-bar-user' value={search}  name='search' onChange={(e)=>{setSearch(e.target.value)}} placeholder='Search...'></input>
     <button type='submit'  onClick={Search} className='submit-search-btn' id='searchButton'>Search</button>
     </div>
     
