@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 function AddAcademy() {
 
-const[name,setName]=useState('')
+const[academyname,setName]=useState('')
 const[location,setLocation]=useState('')
-const[image,setImage]=useState('')
+const[imageurl,setImage]=useState('')
 const[email,setEmail]=useState('')
 const[contactnumber,setContactnumber]=useState('')
 const nav=useNavigate();
@@ -15,7 +15,7 @@ const nav=useNavigate();
 const addAcademy=(e)=>{
 
     e.preventDefault();
-    if(name.length===0||email.length===0||location.length===0||image.length===0||contactnumber.length===0)
+    if(academyname.length===0||email.length===0||location.length===0||image.length===0||contactnumber.length===0)
     {
         toast("Check It");
     }
@@ -34,7 +34,7 @@ const addAcademy=(e)=>{
     <div className='title-register'>
     <h2>Add Institute</h2></div><br/>
     <label htmlFor='institute-name'>Institute Name</label>&nbsp;
-    <input type='text' id='insitute-name' placeholder='Academy Name' value={name} onChange={(e)=>{setName(e.target.value)}}/><br/><br/>
+    <input type='text' id='insitute-name' placeholder='Academy Name' value={academyname} onChange={(e)=>{setName(e.target.value)}}/><br/><br/>
     <label htmlFor='institute-place'>Location</label>&nbsp;
     <input type='text' id='insitute-place' placeholder='Location' value={location} onChange={(e)=>{setLocation(e.target.value)}}/><br/><br/>
     <label htmlFor='institute-email'>Academy Email id</label>&nbsp;
@@ -42,7 +42,7 @@ const addAcademy=(e)=>{
     <label htmlFor='institute-contact'>contact Number</label>&nbsp;
     <input type='tel' maxLength={10} id='insitute-contact' placeholder='Contact Number' value={contactnumber} onChange={(e)=>{setContactnumber(e.target.value)}}/><br/><br/>
     <label htmlFor='institute-image'>Institute Image Url</label>&nbsp;
-    <input type='text' id='insitute-image' placeholder='Image url' value={image} onChange={(e)=>{setImage(e.target.value)}}/><br/><br/>
+    <input type='text' id='insitute-image' placeholder='Image url' value={imageurl} onChange={(e)=>{setImage(e.target.value)}}/><br/><br/>
     <button type='submit' id='submitButton' onClick={addAcademy} className='submitButton'>Submit</button>
     <ToastContainer autoClose={1000}/>
     </form>     
