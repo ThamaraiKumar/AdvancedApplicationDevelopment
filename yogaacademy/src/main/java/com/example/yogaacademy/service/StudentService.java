@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
+
 import com.example.yogaacademy.model.Student;
 import com.example.yogaacademy.repository.StudentRepo;
 
@@ -36,15 +37,14 @@ public class StudentService {
         }).orElseThrow(()->new RuntimeException("Student not found with this email"));
     }
 
-    public Optional<Student> getUser(@NonNull String email) //doubt
+    public Optional<Student> getStudent(@NonNull String email) //doubt
     {
         return studentRepo.findByEmail(email);
     }
 
-    public void deleteUser(@NonNull Integer id)
+    public void deleteStudent(@NonNull Integer id)
     {
         studentRepo.deleteById(id);
     }
-
     
 }

@@ -3,6 +3,7 @@ package com.example.yogaacademy.configuration;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,11 +20,11 @@ public class UsersDetailsService implements UserDetailsService {
     private UserRepo userRepo;
     
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
+    public UserDetails loadUserByUsername(@NonNull String email) throws UsernameNotFoundException
     {
-        Optional<User> userdetails=userRepo.findById(username);
+        Optional<User> userdetails=userRepo.findById(email);
         return userdetails.map(UsersDetails::new)
-        .orElseThrow(()->new UsernameNotFoundException("User not found with this email "+ username));
+        .orElseThrow(()->new UsernameNotFoundException("User not found with this email "+ email));
     }
     
 }
