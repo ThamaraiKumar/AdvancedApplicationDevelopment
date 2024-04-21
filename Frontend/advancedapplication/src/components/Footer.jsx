@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { Facebook, Instagram, LinkedIn, Mail,  PhoneAndroidRounded, YouTube } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -21,8 +22,8 @@ function Footer() {
   <h1>About</h1>
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">FAQ</a></li>
+    <li><Link to="/about">About</Link></li>
+    <li><Link to='/faq'>FAQ</Link></li>
     <li><a href="#">Contact</a></li>
   </ul>
 </div>
@@ -38,7 +39,7 @@ function Footer() {
   </div>
 </div>
 </div>
-<footer>© Your Copyright 2024 All Rights Reserved</footer>
+<footer>© Your Copyright 2024 &nbsp;All Rights Reserved</footer>
 </section>
     
     

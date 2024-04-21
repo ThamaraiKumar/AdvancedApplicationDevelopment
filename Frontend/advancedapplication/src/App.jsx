@@ -12,6 +12,8 @@ import GetUsers from './components/admin/GetUsers'
 import ShowAcademies from './components/admin/ShowAcademies'
 import AddAcademy from './components/admin/AddAcademy'
 import NoofUsers from './components/admin/Charts/NoofUsers'
+import About from './components/pages/About'
+import FAQ from './components/pages/FAQ'
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
           <Route path='/admin/addacademy' element={<AddAcademy/>}/>
           <Route path='/admin/showacademies' element={<ShowAcademies/>}/>
           <Route path='/admin/users' element={<GetUsers/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/faq' element={<FAQ/>}/>
           <Route path="admin/dashboard/chart" element={<NoofUsers/>}/>
           <Route path='*' element={<div><img src='https://freefrontend.com/assets/img/html-funny-404-pages/CodePen-404-Page.gif'/></div>}/>
       </Routes>

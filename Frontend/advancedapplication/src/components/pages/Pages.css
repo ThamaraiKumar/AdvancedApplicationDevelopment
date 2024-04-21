@@ -1,0 +1,25 @@
+.faq-content
+{
+    font-family: cursive;
+    color: rgb(29, 19, 6);
+}
+.faq
+{
+   margin-top: 1%;
+}
+.btn
+{
+    position: absolute;
+    left:40%;
+    top:63%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(99, 56, 139);
+    width: 10%;
+    height: 5%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

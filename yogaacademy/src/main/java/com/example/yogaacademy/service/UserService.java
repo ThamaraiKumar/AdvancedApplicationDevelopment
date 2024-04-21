@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,13 @@ public class UserService {
         userRepo.deleteById(email);
     }
 
-    
+    public String getRoleForUser(String email) {
+        Optional<User> userOptional = userRepo.findById(email);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return user.getRole(); 
+        } else {
+            throw new UsernameNotFoundException("User not found with email: " + email);
+        }
+    }
 }

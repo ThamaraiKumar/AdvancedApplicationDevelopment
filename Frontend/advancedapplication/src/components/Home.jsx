@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'
 import homeimage from '../assets/home-bg.jpg'
 import Footer from './Footer'
 
+import ImageCarousel from './ImageCarousel'
 
 function Home() {
   return (
@@ -25,11 +26,13 @@ function Home() {
     <div className='text-content-home'>
     <p className='font-effect-shadow-multiple'><q>Yoga is a mirror to look at ourselves from within</q></p>
     </div><br/>
-
+<br/>
     {/*<div className='image-slider'>
     <ImageHome/>
   </div>*/}
-
+<div>
+  <div className='imagecarousel'><ImageCarousel/></div>
+</div><br/>
     <footer>
     <div className='footer-yoga'><Footer/></div>
     </footer>

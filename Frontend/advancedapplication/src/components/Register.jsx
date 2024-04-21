@@ -8,34 +8,36 @@ import { ToastContainer, toast } from 'react-toastify';
 
 function Register() {
 
-const[emailid,setEmailId]=useState('');
-const[user,setuser]=useState('');
+const[email,setEmailId]=useState('');
+const[role,setuser]=useState('');
 const[password,setPassword]=useState('');
 const[confirmpassword,setConfirmPassword]=useState('');
-const[username,setUsername]=useState('');
+const[name,setUsername]=useState('');
 const[mobilenumber,setMobilenumber]=useState('');
 const nav=useNavigate();
 
 const handleSubmit=(e)=>{
     e.preventDefault();
-    if(user.length===0||emailid.length===0|| password.length===0||confirmpassword.length===0||
+    if(user.length===0||email.length===0|| password.length===0||confirmpassword.length===0||
       mobilenumber.length===0)
     {
       toast("Enter all fields");
     }
     else if(confirmpassword!==password) toast.warn("Password ⌛Must be same");
     else{
-      emailid:emailid;
-      username:username;
-      user:user;
-      mobilenumber:mobilenumber;
-      console.log(emailid+" "+user+" "+mobilenumber+" "+username);
-      localStorage.setItem("emailid",emailid);
-      localStorage.setItem("username",username);
+      const details={
+      emailid:email,
+      name:name,
+      role:'USER',
+      mobilenumber:mobilenumber,
+      }
+      console.log(email+" "+role+" "+mobilenumber+" "+name);
+      localStorage.setItem("emailid",email);
+      localStorage.setItem("username",name);
       localStorage.setItem("mobilenum",mobilenumber);
       
-      if(user==='admin') nav("/admin/dashboard")
-      else if(user==='user') nav("/user/dashboard")
+      if(role==='ADMIN') nav("/admin/dashboard/chart")
+      else if(role==='USER') nav("/user/dashboard")
     }
 }
 
@@ -59,8 +61,8 @@ const handleSubmit=(e)=>{
     </select><br/><br/>
 
 
-    <input type='email' id='emailid email'  value={emailid} required placeholder='Enter email' className='form-input-register' name='email' onChange={(e)=>{setEmailId(e.target.value)}}></input><br/><br/>
-    <input type='text' id='username' value={username}  required placeholder='Enter Username'  className='form-input-register' name='username' onChange={(e)=>{setUsername(e.target.value)}}></input><br/><br/>
+    <input type='email' id='emailid email'  value={email} required placeholder='Enter email' className='form-input-register' name='email' onChange={(e)=>{setEmailId(e.target.value)}}></input><br/><br/>
+    <input type='text' id='username' value={name}  required placeholder='Enter Username'  className='form-input-register' name='username' onChange={(e)=>{setUsername(e.target.value)}}></input><br/><br/>
     <input type='tel' id='mobilenumber' value={mobilenumber} maxLength={10} required placeholder='Enter Mobilenumber' className='form-input-register' name='mobilenumber' onChange={(e)=>{setMobilenumber(e.target.value)}}></input><br/><br/>
     <input type='password' id='password pwd' required placeholder='Password' className='form-input-register' name='password' onChange={(e)=>{setPassword(e.target.value)}}></input><br/><br/>
     <input type='password' id='confirmpassword'  required placeholder='Confirm Password' className='form-input-register' name='confirmpassword' onChange={(e)=>{setConfirmPassword(e.target.value)}}></input><br/><br/>
