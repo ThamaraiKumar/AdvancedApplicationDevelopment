@@ -1,30 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AdminDashboard from './AdminDashboard'
 import { Rating } from '@mui/material'
 import { Edit } from '@mui/icons-material'
 
 function ShowAcademies() {
-
-    const details=[
-        {
-            academyId:1,
-            academyname:"COIMBATORE YOGA CENTER",
-            imageurl:"https://www.kindpng.com/picc/m/253-2534116_yoga-icon-png-transparent-png.png",
-            place:"Coimbatore"
-        },
-        {
-            academyId:2,
-            academyname:"MADURAI YOGA CENTER",
-            imageurl:"https://static.vecteezy.com/system/resources/thumbnails/013/261/186/small/girl-doing-yoga-and-meditating-yoga-love-freedom-happiness-health-free-png.png",
-            place:"Madurai"
-        },
-        {
-            academyId:3,
-            academyname:"MADURAI YOGA CENTER",
-            imageurl:"D:/AdvancedApplicationDevelopment/AdvancedApplicationDevelopment/Frontend/advancedapplication/src/assets/coimbatore-yoga-center.png",
-            place:"Madurai"
-        },
-    ]
+    const [details,setDetails]=useState([]);
   return (
     <div>
     <div><AdminDashboard/></div>

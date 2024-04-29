@@ -4,6 +4,7 @@ import logo from '../assets/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import Image from '../assets/register-side-image.png'
 import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios'
 
 
 function Register() {
@@ -16,9 +17,9 @@ const[name,setUsername]=useState('');
 const[mobilenumber,setMobilenumber]=useState('');
 const nav=useNavigate();
 
-const handleSubmit=(e)=>{
+const handleSubmit=async (e)=>{
     e.preventDefault();
-    if(user.length===0||email.length===0|| password.length===0||confirmpassword.length===0||
+    if(role.length===0||email.length===0|| password.length===0||confirmpassword.length===0||
       mobilenumber.length===0)
     {
       toast("Enter all fields");
@@ -26,18 +27,26 @@ const handleSubmit=(e)=>{
     else if(confirmpassword!==password) toast.warn("Password ⌛Must be same");
     else{
       const details={
-      emailid:email,
+      email:email,
       name:name,
       role:'USER',
       mobilenumber:mobilenumber,
       }
-      console.log(email+" "+role+" "+mobilenumber+" "+name);
-      localStorage.setItem("emailid",email);
-      localStorage.setItem("username",name);
+      
+      try{
+        const response=await axios.post("http://localhost:8080/api/user/createUser",details);
+        console.log(response.data);
+      }catch(error)
+      {
+        console.error("Error ",error);
+      }
+      // console.log(email+" "+role+" "+mobilenumber+" "+name);
+      localStorage.setItem("email",email);
+      localStorage.setItem("name",name);
       localStorage.setItem("mobilenum",mobilenumber);
       
-      if(role==='ADMIN') nav("/admin/dashboard/chart")
-      else if(role==='USER') nav("/user/dashboard")
+      // if(role==='ADMIN') nav("/admin/dashboard/chart")
+     if(role==='USER') nav("/user/dashboard")
     }
 }
 

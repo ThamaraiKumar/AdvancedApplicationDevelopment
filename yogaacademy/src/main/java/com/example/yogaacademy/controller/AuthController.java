@@ -6,7 +6,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +21,6 @@ import com.example.yogaacademy.service.UserService;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin
 public class AuthController {
 
     @Autowired
@@ -50,7 +48,7 @@ public class AuthController {
             String role = userService.getRoleForUser(authRequest.getEmail());
             AuthResponse response=AuthResponse.builder()
             .token(token)
-            .emailid(authRequest.getEmail())
+            .email(authRequest.getEmail())
             .role(role)
             .build();
             return ResponseEntity.ok(response);

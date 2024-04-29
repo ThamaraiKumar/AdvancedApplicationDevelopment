@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import AdminDashboard from './AdminDashboard'
 import { ToastContainer, toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function AddAcademy() {
 
@@ -12,7 +13,7 @@ const[email,setEmail]=useState('')
 const[contactnumber,setContactnumber]=useState('')
 const nav=useNavigate();
 
-const addAcademy=(e)=>{
+const addAcademy=async(e)=>{
 
     e.preventDefault();
     if(academyname.length===0||email.length===0||location.length===0||image.length===0||contactnumber.length===0)
@@ -20,7 +21,23 @@ const addAcademy=(e)=>{
         toast("Check It");
     }
     else{
-        nav("/admin/settings")
+
+      const details={
+        academyname:academyname,
+        email:email,
+        location:location,
+        imageurl:imageurl,
+        contactnumber:contactnumber,
+      }
+      try{
+        const response=await axios.post("http://localhost:8080/api/academy/create/Academy",details);
+        console.log(response.data);
+      }catch(error)
+      {
+        console.error("Error :",error);
+      }
+      localStorage.setItem("academyID",details.academyname);
+      nav("/admin/dashboard/chart")
     }
 }
 

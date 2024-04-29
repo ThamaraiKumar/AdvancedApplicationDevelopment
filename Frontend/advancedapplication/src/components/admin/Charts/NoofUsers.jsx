@@ -8,6 +8,7 @@ import {
 } from "recharts";
 import './Chart.css'
 import AdminDashboard from '../AdminDashboard';
+import Cards from './Cards';
 
 function NoofUsers() {
     const data = [
@@ -21,13 +22,16 @@ function NoofUsers() {
     <div>
     <div><AdminDashboard/></div>
     <div className='barchart'>
-    <BarChart width={500} height={400} data={data}>
-            <Bar dataKey="users" fill="skyblue" />
+    <BarChart width={500} height={300} data={data}>
+            <Bar dataKey="users" fill="blue" />
             <CartesianGrid stroke="transparent" />
             <XAxis dataKey="name" />
             <YAxis />
         </BarChart>
         <div className='chart-desc'>No of Users till Now</div>
+    </div>
+    <div className='card-dashboard'>
+    <Cards/>
     </div>
     </div>
   )

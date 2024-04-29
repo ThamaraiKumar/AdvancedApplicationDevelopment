@@ -5,7 +5,7 @@ import lombok.Builder;
 @Builder
 public class AuthResponse {
     private String token;
-	private String emailid;
+	private String email;
 	private String role;
 	public String getToken() {
 		return token;
@@ -13,11 +13,11 @@ public class AuthResponse {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	public String getEmailid() {
-		return emailid;
+	public String getEmail() {
+		return email;
 	}
-	public void setEmailid(String emailid) {
-		this.emailid = emailid;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public void setRole(String role)
 	{

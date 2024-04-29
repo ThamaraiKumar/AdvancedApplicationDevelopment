@@ -7,7 +7,7 @@ function AdminDashboard() {
   
   return (
     <div className='admin-dashboard-header'>
-    <div className='admin-title'><h1>Admin &nbsp;Dashboard</h1></div>
+    <div className='admin-title' style={{fontFamily:'Times new Roman',fontSize:'larger'}}><h1>Admin &nbsp;Dashboard</h1></div>
    <div className='sidebar-admin'>
     <ul className="sidebar-menu-admin">
         <li><Link to="/admin/dashboard/chart">Dashboard</Link></li>

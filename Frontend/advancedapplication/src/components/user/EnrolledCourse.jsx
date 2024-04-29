@@ -42,7 +42,7 @@ const addAcademy=(e)=>{
       <label className="user-navbar-logo"><Link to='/'><img src={logo} className='image-logo-login'/></Link>YOGA &nbsp; ACADEMY</label>
       <ul className='ul'>
         <li className='li'><Link  to="/" className="user-active" >Home</Link></li>
-        <li className='li' id='userAcademy'><a href="#useracademygrid">Academy</a></li>
+        <li className='li' id='userAcademy'><Link to='/user/dashboard'>Academy</Link></li>
         <li className='li' id='userEnrolledCourse'><Link to='/user/enrollement'>Enrolled Course</Link></li>
         <li className='li' id='logout'><Link to='/login' onClick={logout} className='logout-navbar'>Logout</Link></li>
       </ul>
@@ -55,15 +55,15 @@ const addAcademy=(e)=>{
 <form className='academy-add-form'>
     <div className='title-register'>
     <h2>Enroll Institute</h2></div><br/>
-    <label htmlFor='institute-name'>Institute Name</label>&nbsp;
+    <label htmlFor='institute-name'>Enrollment Form</label>&nbsp;
     <input type='text' id='insitute-name' placeholder='Academy Name' value={name} onChange={(e)=>{setName(e.target.value)}}/><br/><br/>
-    <label htmlFor='institute-place'>Location</label>&nbsp;
+    <label htmlFor='institute-place'>Course</label>&nbsp;
     <input type='text' id='insitute-place' placeholder='Location' value={location} onChange={(e)=>{setLocation(e.target.value)}}/><br/><br/>
-    <label htmlFor='institute-email'>Academy Email id</label>&nbsp;
+    <label htmlFor='institute-email'>Email id</label>&nbsp;
     <input type='email' id='insitute-email' placeholder='Email Id' value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/><br/>
     <label htmlFor='institute-contact'>contact Number</label>&nbsp;
     <input type='tel' maxLength={10} id='insitute-contact' placeholder='Contact Number' value={contactnumber} onChange={(e)=>{setContactnumber(e.target.value)}}/><br/><br/>
-    <label htmlFor='institute-image'>Institute Image Url</label>&nbsp;
+    <label htmlFor='institute-image'>Document for Verification Url</label>&nbsp;
     <input type='text' id='insitute-image' placeholder='Image url' value={image} onChange={(e)=>{setImage(e.target.value)}}/><br/><br/>
     <button type='submit' id='submitButton' onClick={addAcademy} className='submitButton'>Submit</button>
     <ToastContainer autoClose={1000}/>

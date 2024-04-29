@@ -36,9 +36,9 @@ const submit=(e)=>{
   .then((response=>{
     const token=response.data.token;
     const role=response.data.role;
-    const email=response.data.email;
+    // const email=response.data.email;
     if(token){
-    localStorage.setItem("emailId",email);
+    localStorage.setItem("emailId",userAuth.email);
     localStorage.setItem("token",token);
     localStorage.setItem("role",role);
     }
@@ -46,8 +46,8 @@ const submit=(e)=>{
     // toast.success("Congratulations🥳");
   
 
-    if(role!=='ADMIN') navigate("/user/dashboard/chart")
-    else navigate("/admin/dashboard");
+    if(role!=='ADMIN') navigate("/user/dashboard")
+    else navigate("/admin/dashboard/chart");
 
 
 
@@ -71,7 +71,7 @@ const submit=(e)=>{
             <fieldset className='fieldset-login'>
                 <legend>Login Back</legend><br/>
                 <label htmlFor='emailid' className='form-label'>EmailId</label>
-                <input type='email' id='emailid' className='input-login-form' name='emailid' placeholder='Email ID' value={email} onChange={(e)=>{setEmailid(e.target.value)}} required/><br/><br/>
+                <input type='email' id='emailid' className='input-login-form' name='email' placeholder='Email ID' value={email} onChange={(e)=>{setEmailid(e.target.value)}} required/><br/><br/>
                 <label htmlFor='password' className='form-label'>Password</label>
                 <input type='password' id='password' className='input-login-form' name='password' placeholder='Password' value={password} onChange={(e)=>{setPassword(e.target.value)}} required/>
                 <button type='submit' className='login_button' onClick={submit}>Login</button>
